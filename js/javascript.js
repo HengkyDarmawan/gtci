@@ -1,3 +1,12 @@
+window.addEventListener("load", function () {
+    // loader animation
+    document.querySelector(".page-loader").classList.add("fade-out");
+    this.setTimeout(function () {
+        document.querySelector(".page-loader").style.display = "none";
+    }, 600);
+    // scroll animation
+    AOS.init();
+})
 // toggel Navbar
 const navToggler = document.querySelector(".nav-toggler");
 navToggler.addEventListener("click", toggleNav);
