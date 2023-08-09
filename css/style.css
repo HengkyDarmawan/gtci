@@ -278,6 +278,15 @@ section {
     padding: 0 15px;
 }
 
+.header .logo a {
+    list-style: none;
+}
+
+.header .logo span {
+    margin-left: 15px;
+    color: var(--white);
+}
+
 .header .nav-toggler {
     height: 34px;
     width: 44px;
@@ -1092,13 +1101,18 @@ section {
         line-height: 65px;
     }
 
+    .header .logo span {
+        /* margin-left: 10px; */
+        font-size: 14px;
+    }
+
     .about-text,
     .about-img {
         width: 100%;
     }
 
     .about-text h3 {
-        font-size: 24px;
+        font-size: 14px;
     }
 
     .about-img {
