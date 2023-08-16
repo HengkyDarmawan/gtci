@@ -534,7 +534,6 @@ section {
 }
 
 .product-tabs-content .product-item {
-    /* background-color: #191f3a; */
     flex: 0 0 33.33%;
     max-width: 33.33%;
     padding: 15px;
