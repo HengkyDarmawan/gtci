@@ -42,6 +42,18 @@
     <!-- loader -->
     <div class="page-loader"></div>
     <!-- end loader -->
+    <div class="floating-button">
+        <div class="action" onclick="actionToggle()">
+            <span>+</span>
+            <ul>
+                <li><i class="fa-brands fa-whatsapp"></i> Whatsapp</li>
+                <li><i class="fa-brands fa-facebook"></i> Facebook</li>
+                <li><i class="fa-brands fa-instagram"></i> Instagram</li>
+                <li><i class="fa-brands fa-linkedin"></i> Linkedin</li>
+                <li><i class="fa-brands fa-youtube"></i> Youtube</li>
+            </ul>
+        </div>
+    </div>
     <!-- header -->
     <header class="header">
         <div class="container">
@@ -339,7 +351,7 @@
             </div>
             <div class="row">
                 <div class="team-item" data-aos="flip-left" data-aos-duration="1000">
-                    <img src="img/teams/amin.JPG" alt="team image">
+                    <img src="img/teams/amin.jpg" alt="team image">
                     <div class="team-item-info">
                         <h3>Amin Prayugi</h3>
                         <p>Chief Operating Officer</p>
@@ -347,7 +359,7 @@
                 </div>
                 <!-- end team 3 -->
                 <div class="team-item" data-aos="flip-left" data-aos-duration="1000">
-                    <img src="img/teams/hengky.JPG" alt="team image">
+                    <img src="img/teams/hengky.jpg" alt="team image">
                     <div class="team-item-info">
                         <h3>Hengky Darmawan</h3>
                         <p>Chief Executive Officer</p>
@@ -355,7 +367,7 @@
                 </div>
                 <!-- end team 2 -->
                 <div class="team-item" data-aos="flip-left" data-aos-duration="1000">
-                    <img src="img/teams/fauzi.JPG" alt="team image">
+                    <img src="img/teams/fauzi.jpg" alt="team image">
                     <div class="team-item-info">
                         <h3>Fauzi Rahman</h3>
                         <p>Chief Marketing Officer</p>
@@ -365,73 +377,51 @@
             </div>
         </div>
     </section>
-    <!-- end testimonil -->
-    <section class="section-faq sec-padding" id="faq">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h2 data-title="Any Question ?" data-aos="fade-up">FAQ</h2>
-                </div>
-            </div>
-            <div class="accordion" data-aos="fade-up">
-                <div class="accordion-item" id="question1" >
-                    <a href="#question1" class="accordion-link">
-                        MOQ
-                        <i class="fa-solid fa-plus add"></i>
-                        <i class="fa-solid fa-minus remove"></i>
-                    </a>
-                    <div class="answer">
+    <!-- end FAQ -->
+    <div class="faq sec-padding" id="faq">
+        <div class="section-title sec-padding">
+            <h2 data-title="Any Question ?" data-aos="fade-up">FAQ</h2>
+        </div>
+        <div class="faq-container" data-aos="fade-up">
+            <div class="accordion">
+                <div class="contentBx">
+                    <div class="label">MOQ</div>
+                    <div class="content">
                         <p>Our Minimum order quantity is 1 x 40 ft Container</p>
                     </div>
                 </div>
-                <!-- FAQ 1 -->
-                <div class="accordion-item" id="question2">
-                    <a href="#question2" class="accordion-link">
-                        Payment Method
-                        <i class="fa-solid fa-plus add"></i>
-                        <i class="fa-solid fa-minus remove"></i>
-                    </a>
-                    <div class="answer">
+                <hr>
+                <div class="contentBx">
+                    <div class="label">Payment Method</div>
+                    <div class="content">
                         <p>We use the bank transfer payment method (T/T) and LC at Sight</p>
                     </div>
                 </div>
-                <!-- FAQ 2 -->
-                <div class="accordion-item" id="question3">
-                    <a href="#question3" class="accordion-link">
-                        Product Catalogue
-                        <i class="fa-solid fa-plus add"></i>
-                        <i class="fa-solid fa-minus remove"></i>
-                    </a>
-                    <div class="answer">
+                <hr>
+                <div class="contentBx">
+                    <div class="label">Product Catalogue</div>
+                    <div class="content">
                         <p>Yes, please contact us</p>
                     </div>
                 </div>
-                <!-- FAQ 3 -->
-                <div class="accordion-item" id="question4">
-                    <a href="#question4" class="accordion-link">
-                        Shipping
-                        <i class="fa-solid fa-plus add"></i>
-                        <i class="fa-solid fa-minus remove"></i>
-                    </a>
-                    <div class="answer">
+                <hr>
+                <div class="contentBx">
+                    <div class="label">Shipping</div>
+                    <div class="content">
                         <p>Freight on Board (FOB)</p>
                     </div>
                 </div>
-                <!-- FAQ 4 -->
-                <div class="accordion-item" id="question5">
-                    <a href="#question5" class="accordion-link">
-                        Free Sample Product
-                        <i class="fa-solid fa-plus add"></i>
-                        <i class="fa-solid fa-minus remove"></i>
-                    </a>
-                    <div class="answer">
+                <hr>
+                <div class="contentBx">
+                    <div class="label">Free Sample Product</div>
+                    <div class="content">
                         <p>Yes, please contact us</p>
                     </div>
                 </div>
-                <!-- FAQ 5 -->
+                <hr>
             </div>
         </div>
-    </section>
+    </div>
     <!-- footer -->
     <footer class="footer"  id="footer">
         <div class="container">
@@ -466,6 +456,22 @@
     </footer>
     <!-- end footer -->
 </body>
+<script>
+    //floating button
+    function actionToggle(){
+        let action = document.querySelector('.action');
+        action.classList.toggle('active');
+    }
+</script>
+<script>
+    //faq animation
+    const accordion = document.getElementsByClassName('contentBx');
+    for (i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    }
+</script>
 <script src="js/javascript.js"></script>
 <script src="js/aos.js"></script>
 <script src="https://kit.fontawesome.com/8bc1a3b258.js" crossorigin="anonymous"></script>
