@@ -255,6 +255,7 @@ section {
     border-radius: 50%;
     cursor: pointer;
     z-index: 100000;
+    a
 }
 
 .floating-button .action.active {
